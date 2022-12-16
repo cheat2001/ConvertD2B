@@ -1,0 +1,39 @@
+.container {
+    width: 300px;
+    height: 300px;
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    color: white;
+}
+
+.container input {
+    border: none;
+    outline: none;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.container button {
+    padding: 5px 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.288);
+    cursor: pointer;
+}
+
+.container button:active {
+    transform: scale(0.95);
+}
+
+.container .binary-output {
+    background-color: #fafafaa1;
+}

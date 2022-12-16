@@ -1,31 +1,16 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
-
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'convert-decimal-to-binary'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('convert-decimal-to-binary');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('convert-decimal-to-binary app is running!');
-  });
-});
+import { AppComponent } from "./app.component";
+describe("Converting from decimal to binary method", () => {
+  const comp = new AppComponent();
+  it("If we passed 7 should return 111", () => {
+    expect(comp.convertDecemalToBinary(7)).toEqual(111);
+  })
+  it("If we passed 10 should return 1010", () => {
+    expect(comp.convertDecemalToBinary(10)).toEqual(1010);
+  })
+  it("If we passed 255 should return 11111111", () => {
+    expect(comp.convertDecemalToBinary(255)).toEqual(11111111)
+  })
+  it("If we passed 15 should return 1111", () => {
+    expect(comp.convertDecemalToBinary(15)).toEqual(1111);
+  })
+})
